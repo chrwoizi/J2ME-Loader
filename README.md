@@ -4,6 +4,8 @@ Chaos Campus was a university project where computer science students created a 
 
 You are playing a student called Simon. An evil witch has kidnapped the university president and she released a poisonous substance on the university campus to convert all students to monsters. Simon must solve riddles and engage in boss fights to rescue the president and fellow students.
 
+The game language is german.
+
 This is an android port of the J2ME game. It is based on [J2ME-Loader](https://github.com/nikita36078/J2ME-Loader).
 
 
