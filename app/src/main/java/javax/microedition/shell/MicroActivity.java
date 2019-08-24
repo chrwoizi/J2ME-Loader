@@ -24,6 +24,7 @@ import android.content.pm.ActivityInfo;
 import android.content.res.TypedArray;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Process;
 import android.preference.PreferenceManager;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -93,6 +94,7 @@ public class MicroActivity extends AppCompatActivity {
 		if (vk != null) {
 			vk.setView(overlayView);
 			overlayView.addLayer(vk);
+			setKeyVisibility(vk);
 		}
 		layout = findViewById(R.id.displayable_container);
 		toolbar = findViewById(R.id.toolbar);
@@ -118,6 +120,15 @@ public class MicroActivity extends AppCompatActivity {
 			e.printStackTrace();
 			showErrorDialog(e.getMessage());
 		}
+	}
+
+	private void setKeyVisibility(VirtualKeyboard vk) {
+		vk.setKeyVisibility(VirtualKeyboard.KEY_NUM0, true);
+		vk.setKeyVisibility(VirtualKeyboard.KEY_SOFT_LEFT, true);
+		vk.setKeyVisibility(VirtualKeyboard.KEY_SOFT_RIGHT, true);
+		vk.setKeyVisibility(VirtualKeyboard.KEY_DIAL, true);
+		vk.setKeyVisibility(VirtualKeyboard.KEY_CANCEL, true);
+		vk.setKeyVisibility(VirtualKeyboard.KEY_FIRE, true);
 	}
 
 	@Override
@@ -365,7 +376,7 @@ public class MicroActivity extends AppCompatActivity {
 			MenuInflater inflater = getMenuInflater();
 			inflater.inflate(R.menu.midlet_displayable, menu);
 			if (current instanceof Canvas) {
-				SubMenu group = menu.getItem(0).getSubMenu();
+				Menu group = menu;
 				inflater.inflate(R.menu.midlet_canvas_no_keys, group);
 				VirtualKeyboard vk = ContextHolder.getVk();
 				if (vk instanceof FixedKeyboard) {
@@ -388,7 +399,9 @@ public class MicroActivity extends AppCompatActivity {
 			int id = item.getItemId();
 			if (item.getGroupId() == R.id.action_group_common_settings) {
 				if (id == R.id.action_exit_midlet) {
-					showExitConfirmation();
+					this.finishAffinity();
+					System.exit(0);
+					//showExitConfirmation();
 				} else if (id == R.id.action_take_screenshot) {
 					takeScreenshot();
 				} else if (id == R.id.action_save_log) {
@@ -425,6 +438,7 @@ public class MicroActivity extends AppCompatActivity {
 				break;
 			case R.id.action_layout_switch:
 				vk.switchLayout();
+				setKeyVisibility(vk);
 				break;
 			case R.id.action_hide_buttons:
 				showHideButtonDialog();

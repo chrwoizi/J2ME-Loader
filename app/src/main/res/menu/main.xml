@@ -6,31 +6,38 @@
     <item
         android:id="@+id/action_search"
         android:title="@string/search"
+        android:visible="false"
         app:actionViewClass="androidx.appcompat.widget.SearchView"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/action_about"
         android:title="@string/about"
+        android:visible="false"
         app:showAsAction="never" />
     <item
         android:id="@+id/action_settings"
         android:title="@string/action_settings"
+        android:visible="false"
         app:showAsAction="never" />
     <item
         android:id="@+id/action_templates"
         android:title="@string/templates"
+        android:visible="false"
         app:showAsAction="never" />
     <item
         android:id="@+id/action_help"
         android:title="@string/help"
+        android:visible="false"
         app:showAsAction="never" />
     <item
         android:id="@+id/action_donate"
         android:title="@string/donate"
+        android:visible="false"
         app:showAsAction="never" />
     <item
         android:id="@+id/action_save_log"
         android:title="@string/save_log"
+        android:visible="false"
         app:showAsAction="never" />
     <item
         android:id="@+id/action_exit_app"

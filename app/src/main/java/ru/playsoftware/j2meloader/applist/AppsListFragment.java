@@ -46,7 +46,10 @@ import com.nononsenseapps.filepicker.FilePickerActivity;
 import com.nononsenseapps.filepicker.Utils;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -58,6 +61,7 @@ import androidx.core.content.pm.ShortcutInfoCompat;
 import androidx.core.content.pm.ShortcutManagerCompat;
 import androidx.core.graphics.drawable.IconCompat;
 import androidx.fragment.app.ListFragment;
+
 import io.reactivex.Observable;
 import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.SingleObserver;
@@ -90,6 +94,7 @@ public class AppsListFragment extends ListFragment {
 	private String appSort;
 	private String appPath;
 	private static final int FILE_CODE = 0;
+	private static boolean isRunning = false;
 
 	@Override
 	public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -104,6 +109,14 @@ public class AppsListFragment extends ListFragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		return inflater.inflate(R.layout.fragment_appslist, container, false);
+	}
+
+	public static void copyStream(InputStream in, OutputStream out) throws IOException {
+		byte[] buffer = new byte[1024];
+		int read;
+		while ((read = in.read(buffer)) != -1) {
+			out.write(buffer, 0, read);
+		}
 	}
 
 	@Override
@@ -128,9 +141,71 @@ public class AppsListFragment extends ListFragment {
 	@Override
 	public void onResume() {
 		super.onResume();
-		if (appPath != null) {
-			convertJar(appPath);
-			appPath = null;
+
+		if(isRunning) {
+			this.getActivity().finishAffinity();
+			System.exit(0);
+			return;
+		}
+
+		if(appRepository.getAll().blockingFirst().isEmpty()) {
+			SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getContext());
+			String encoding = sp.getString("pref_encoding", "ISO-8859-1");
+			ProgressDialog dialog = new ProgressDialog(getActivity());
+			dialog.setIndeterminate(true);
+			dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+			dialog.setCancelable(false);
+			dialog.setMessage(getText(R.string.converting_message));
+			dialog.setTitle(R.string.converting_wait);
+
+			try {
+				File tempFile = File.createTempFile("app", "jar");
+				tempFile.deleteOnExit();
+				OutputStream outputStream = new FileOutputStream(tempFile);
+				InputStream inputStream = getResources().openRawResource(R.raw.app);
+				copyStream(inputStream, outputStream);
+				outputStream.close();
+
+				converter.convert(tempFile.getAbsolutePath(), encoding)
+						.subscribeOn(Schedulers.computation())
+						.observeOn(AndroidSchedulers.mainThread())
+						.subscribeWith(new SingleObserver<String>() {
+							@Override
+							public void onSubscribe(Disposable d) {
+								dialog.show();
+							}
+
+							@Override
+							public void onSuccess(String s) {
+								AppItem app = AppUtils.getApp(s);
+								appRepository.insert(app);
+								dialog.dismiss();
+								if (!isAdded()) return;
+								Intent intent = new Intent(Intent.ACTION_DEFAULT, Uri.parse(app.getPathExt()),
+										getActivity(), ConfigActivity.class);
+								intent.putExtra(ConfigActivity.START_IMMEDIATELY, true);
+								isRunning = true;
+								startActivity(intent);
+							}
+
+							@Override
+							public void onError(Throwable e) {
+								e.printStackTrace();
+								if (!isAdded()) return;
+								Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_LONG).show();
+								dialog.dismiss();
+							}
+						});
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		else {
+			Intent i = new Intent(Intent.ACTION_DEFAULT, Uri.parse(appRepository.getAll().blockingFirst().get(0).getPathExt()),
+					getActivity(), ConfigActivity.class);
+			i.putExtra(ConfigActivity.START_IMMEDIATELY, true);
+			isRunning = true;
+			startActivity(i);
 		}
 	}
 
@@ -277,8 +352,8 @@ public class AppsListFragment extends ListFragment {
 	@Override
 	public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
 		super.onCreateContextMenu(menu, v, menuInfo);
-		MenuInflater inflater = getActivity().getMenuInflater();
-		inflater.inflate(R.menu.context_main, menu);
+		//MenuInflater inflater = getActivity().getMenuInflater();
+		//inflater.inflate(R.menu.context_main, menu);
 	}
 
 	@Override

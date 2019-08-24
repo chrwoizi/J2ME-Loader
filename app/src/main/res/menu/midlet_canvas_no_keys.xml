@@ -2,6 +2,7 @@
     <group android:id="@+id/action_group_common_settings">
         <item
             android:id="@+id/action_take_screenshot"
-            android:title="@string/take_screenshot" />
+            android:title="@string/take_screenshot"
+            android:visible="false"/>
     </group>
 </menu>

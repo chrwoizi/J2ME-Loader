@@ -119,6 +119,7 @@ public class ConfigActivity extends BaseActivity implements View.OnClickListener
 	public static final String MIDLET_PATH_KEY = "midletPath";
 	public static final String MIDLET_ORIENTATION_KEY = "orientation";
 	public static final String SHOW_SETTINGS_KEY = "showSettings";
+	public static final String START_IMMEDIATELY = "startimmediately";
 
 	@SuppressLint({"StringFormatMatches", "StringFormatInvalid"})
 	@Override
@@ -264,7 +265,10 @@ public class ConfigActivity extends BaseActivity implements View.OnClickListener
 			}
 		});
 
-		if (loaded && !showSettings) {
+		if(intent.getBooleanExtra(START_IMMEDIATELY, false)) {
+			startMIDlet();
+		}
+		else if (loaded && !showSettings) {
 			startMIDlet();
 		}
 	}
@@ -394,7 +398,7 @@ public class ConfigActivity extends BaseActivity implements View.OnClickListener
 		cxTouchInput.setChecked(params.getBoolean(("TouchInput"), true));
 		tfFpsLimit.setText(Integer.toString(params.getInt("FpsLimit", 0)));
 
-		spVKType.setSelection(params.getInt("VirtualKeyboardType", 0));
+		spVKType.setSelection(params.getInt("VirtualKeyboardType", 1));
 		sbVKAlpha.setProgress(params.getInt("VirtualKeyboardAlpha", 64));
 		tfVKHideDelay.setText(Integer.toString(params.getInt("VirtualKeyboardDelay", -1)));
 		tfVKBack.setText(Integer.toHexString(

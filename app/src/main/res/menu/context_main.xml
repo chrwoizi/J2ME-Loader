@@ -2,14 +2,18 @@
 
     <item
         android:id="@+id/action_context_shortcut"
-        android:title="@string/action_context_shortcut" />
+        android:title="@string/action_context_shortcut"
+        android:visible="false" />
     <item
         android:id="@+id/action_context_rename"
-        android:title="@string/action_context_rename" />
+        android:title="@string/action_context_rename"
+        android:visible="false" />
     <item
         android:id="@+id/action_context_settings"
-        android:title="@string/action_settings" />
+        android:title="@string/action_settings"
+        android:visible="false" />
     <item
         android:id="@+id/action_context_delete"
-        android:title="@string/action_context_delete" />
+        android:title="@string/action_context_delete"
+        android:visible="false" />
 </menu>
