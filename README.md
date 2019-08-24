@@ -13,6 +13,10 @@ This is an android port of the J2ME game. It is based on [J2ME-Loader](https://g
 
 Website: [woizischke.com/chaoscampus](https://woizischke.com/chaoscampus/index.html)
 
+## License
+> The J2ME Loader source code is licensed under the [Apache License, Version 2.0.](http://www.apache.org/licenses/LICENSE-2.0)  
+> (See the [LICENSE](https://github.com/nikita36078/J2ME-Loader/blob/master/LICENSE) file for the whole license text.)
+
 ## Screenshots
 
 <img src="screenshots/1.png" width="50%">
@@ -26,7 +30,3 @@ Website: [woizischke.com/chaoscampus](https://woizischke.com/chaoscampus/index.h
 <img src="screenshots/9.png" width="50%">
 <img src="screenshots/10.png" width="50%">
 <img src="screenshots/11.png" width="50%">
-
-## License
-> The J2ME Loader source code is licensed under the [Apache License, Version 2.0.](http://www.apache.org/licenses/LICENSE-2.0)  
-> (See the [LICENSE](https://github.com/nikita36078/J2ME-Loader/blob/master/LICENSE) file for the whole license text.)
