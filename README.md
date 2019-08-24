@@ -1,6 +1,6 @@
 # Chaos Campus
 
-Chaos Campus was a university project where computer science students created a J2ME mobile game for feature phones. 
+Chaos Campus was a german university project where computer science students created a J2ME mobile game for feature phones. 
 
 You are playing a student called Simon. An evil witch has kidnapped the university president and she released a poisonous substance on the university campus to convert all students to monsters. Simon must solve riddles and engage in boss fights to rescue the president and fellow students.
 
