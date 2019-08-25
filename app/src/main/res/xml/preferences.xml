@@ -39,8 +39,8 @@
         android:title="@string/pref_map_keys">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetClass="ru.playsoftware.j2meloader.settings.KeyMapperActivity"
-            android:targetPackage="ru.playsoftware.j2meloader" />
+            android:targetClass="com.deadlinegamedev.chaoscampus.settings.KeyMapperActivity"
+            android:targetPackage="com.deadlinegamedev.chaoscampus" />
     </Preference>
     <ListPreference
         android:defaultValue="ISO-8859-1"

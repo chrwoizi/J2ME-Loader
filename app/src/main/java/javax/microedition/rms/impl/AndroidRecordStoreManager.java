@@ -46,7 +46,7 @@ import javax.microedition.rms.RecordStoreNotOpenException;
 import javax.microedition.shell.MyClassLoader;
 import javax.microedition.util.ContextHolder;
 
-import ru.playsoftware.j2meloader.config.Config;
+import com.deadlinegamedev.chaoscampus.config.Config;
 
 public class AndroidRecordStoreManager implements RecordStoreManager {
 

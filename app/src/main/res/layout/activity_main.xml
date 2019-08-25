@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="ru.playsoftware.j2meloader.MainActivity">
+    tools:context="com.deadlinegamedev.chaoscampus.MainActivity">
 
     <FrameLayout
         android:id="@+id/container"

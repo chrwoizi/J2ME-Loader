@@ -25,8 +25,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.HashMap;
 
-import ru.playsoftware.j2meloader.config.Config;
-import ru.playsoftware.j2meloader.util.XmlUtils;
+import com.deadlinegamedev.chaoscampus.config.Config;
+import com.deadlinegamedev.chaoscampus.util.XmlUtils;
 
 public class SharedPreferencesContainer implements DataContainer, DataEditor {
 	private HashMap<String, Object> configMap;

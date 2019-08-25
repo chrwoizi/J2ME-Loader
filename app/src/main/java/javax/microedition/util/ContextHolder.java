@@ -40,8 +40,8 @@ import javax.microedition.shell.MyClassLoader;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-import ru.playsoftware.j2meloader.config.Config;
-import ru.playsoftware.j2meloader.util.ZipFileCompat;
+import com.deadlinegamedev.chaoscampus.config.Config;
+import com.deadlinegamedev.chaoscampus.util.ZipFileCompat;
 
 public class ContextHolder {
 	private static final String TAG = ContextHolder.class.getName();

@@ -49,7 +49,7 @@ import javax.microedition.util.ContextHolder;
 
 import androidx.annotation.NonNull;
 import androidx.collection.SparseArrayCompat;
-import ru.playsoftware.j2meloader.R;
+import com.deadlinegamedev.chaoscampus.R;
 
 public abstract class Canvas extends Displayable {
 	public static final int KEY_POUND = 35;

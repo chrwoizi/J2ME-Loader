@@ -5,12 +5,12 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
-        applicationId "ru.playsoftware.j2meloader"
+        applicationId "com.deadlinegamedev.chaoscampus"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 68
-        versionName "1.5.1"
-        setProperty("archivesBaseName", "J2ME_Loader-$versionName")
+        versionCode 1
+        versionName "1"
+        setProperty("archivesBaseName", "chaos-campus-$versionName")
         ndk {
             abiFilters 'x86', 'armeabi-v7a'
         }

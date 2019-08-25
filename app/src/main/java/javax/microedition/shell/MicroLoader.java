@@ -37,8 +37,8 @@ import javax.microedition.midlet.MIDlet;
 import javax.microedition.util.ContextHolder;
 
 import io.reactivex.Single;
-import ru.playsoftware.j2meloader.config.Config;
-import ru.playsoftware.j2meloader.util.FileUtils;
+import com.deadlinegamedev.chaoscampus.config.Config;
+import com.deadlinegamedev.chaoscampus.util.FileUtils;
 
 public class MicroLoader {
 	private static final String TAG = MicroLoader.class.getName();

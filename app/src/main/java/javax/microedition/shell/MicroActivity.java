@@ -62,9 +62,9 @@ import io.reactivex.SingleObserver;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
-import ru.playsoftware.j2meloader.R;
-import ru.playsoftware.j2meloader.config.ConfigActivity;
-import ru.playsoftware.j2meloader.util.LogUtils;
+import com.deadlinegamedev.chaoscampus.R;
+import com.deadlinegamedev.chaoscampus.config.ConfigActivity;
+import com.deadlinegamedev.chaoscampus.util.LogUtils;
 
 public class MicroActivity extends AppCompatActivity {
 	private static final int ORIENTATION_DEFAULT = 0;

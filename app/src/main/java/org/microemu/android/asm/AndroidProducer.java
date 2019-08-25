@@ -39,7 +39,7 @@ import java.util.HashMap;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
-import ru.playsoftware.j2meloader.util.ZipFileCompat;
+import com.deadlinegamedev.chaoscampus.util.ZipFileCompat;
 
 public class AndroidProducer {
 

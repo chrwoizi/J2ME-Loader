@@ -25,7 +25,7 @@ import java.util.Arrays;
 
 import javax.microedition.util.ContextHolder;
 
-import ru.playsoftware.j2meloader.util.FileUtils;
+import com.deadlinegamedev.chaoscampus.util.FileUtils;
 
 public class File {
 
