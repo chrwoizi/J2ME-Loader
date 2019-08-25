@@ -10,13 +10,9 @@ Verfügbar auf [Google Play](https://play.google.com/store/apps/details?id=com.d
 
 [Download (jar)](https://woizischke.com/chaos-campus.jar)
 
+[Website](https://woizischke.com/chaoscampus/index.html)
+
 This is an android port of the J2ME game [chrwoizi/chaos-campus](https://github.com/chrwoizi/chaos-campus). It is based on [nikita36078/J2ME-Loader](https://github.com/nikita36078/J2ME-Loader).
-
-## Additional information
-
-[Download Presentation (PDF)](https://woizischke.com/chaos-campus.pdf)
-
-Website: [woizischke.com/chaoscampus](https://woizischke.com/chaoscampus/index.html)
 
 ## License
 > The J2ME Loader source code is licensed under the [Apache License, Version 2.0.](http://www.apache.org/licenses/LICENSE-2.0)  
