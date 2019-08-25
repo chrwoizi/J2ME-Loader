@@ -8,7 +8,7 @@ The game language is german.
 
 Available on [Google Play](https://play.google.com/store/apps/details?id=com.deadlinegamedev.chaoscampus)
 
-This is an android port of the J2ME game. It is based on [J2ME-Loader](https://github.com/nikita36078/J2ME-Loader).
+This is an android port of the [J2ME game](https://github.com/chrwoizi/chaos-campus). It is based on [J2ME-Loader](https://github.com/nikita36078/J2ME-Loader).
 
 
 ## Additional information
