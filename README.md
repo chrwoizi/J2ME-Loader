@@ -1,15 +1,16 @@
 # Chaos Campus
 
-Chaos Campus was a german university project where computer science students created a J2ME mobile game for feature phones. 
+Dieses Spiel wurde von Studenten der Technischen Universität Braunschweig ([TU-BS](https://www.tu-braunschweig.de/)) und der Hochschule für bildende Künste Braunschweig ([HBK](https://www.hbk-bs.de/)) entwickelt.
 
-You are playing a student called Simon. An evil witch has kidnapped the university president and she released a poisonous substance on the university campus to convert all students to monsters. Simon must solve riddles and engage in boss fights to rescue the president and fellow students.
+Auf dem Chaos Campus ist etwas tragisches passiert. Die böse Vizepräsidentin der Universität hat den Präsidenten gekidnappt und mit ihrem Giftnebel alle Studenten in Monster verwandelt. Nur du, Simon, wurdest auf mysteriöse Weise verschont. Also raus aus den Federn und ran an dein Lieblingsbuch "Cormenius". Nicht zum Lernen. Nein nein, dafür ist keine Zeit... Aber zum Monster kloppen eignet sich das "Nachschlagewerk" bestens. Nur so kannst du deine Kommilitonen retten. Ein paar Rätsel und Bosskämpfe warten auch auf dich.
 
-The game language is german.
+Verfügbar auf [Google Play](https://play.google.com/store/apps/details?id=com.deadlinegamedev.chaoscampus) und als [jar-Datei](https://woizischke.com/chaos-campus.jar) für alte Handys aus der Generation vor den Smartphones. Die jar-Datei ist auch mit einem J2ME emulator (z.B. [J2ME-Loader](https://play.google.com/store/apps/details?id=ru.playsoftware.j2meloader) auf Android) ausführbar.
 
-Available on [Google Play](https://play.google.com/store/apps/details?id=com.deadlinegamedev.chaoscampus)
+[Google Play](https://play.google.com/store/apps/details?id=com.deadlinegamedev.chaoscampus)
 
-This is an android port of the J2ME game. It is based on [J2ME-Loader](https://github.com/nikita36078/J2ME-Loader).
+[Download (jar)](https://woizischke.com/chaos-campus.jar)
 
+This is an android port of the J2ME game [chrwoizi/chaos-campus](https://github.com/chrwoizi/chaos-campus). It is based on [nikita36078/J2ME-Loader](https://github.com/nikita36078/J2ME-Loader).
 
 ## Additional information
 
