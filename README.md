@@ -14,6 +14,60 @@ Verfügbar auf [Google Play](https://play.google.com/store/apps/details?id=com.d
 
 This is an android port of the J2ME game [chrwoizi/chaos-campus](https://github.com/chrwoizi/chaos-campus). It is based on [nikita36078/J2ME-Loader](https://github.com/nikita36078/J2ME-Loader).
 
+<details>
+  <summary>CREDITS</summary>
+  <p>
+    Chaos Campus<br>
+    <br>
+    SEP Thema: ./javy - Das Handygame<br>
+    <br>
+    Wer hat's gemacht?<br>
+    <br>
+    Handygame<br>
+    -----------<br>
+    "Player" - <a href="https://www.xing.com/profile/Martin_Fiebig6/cv">Martin Fiebig</a><br>
+    "HBK <-> TU" - <a href="https://www.linkedin.com/in/bettina-g%C3%B6rtz-85a54ab0/">Bettina Görtz</a><br>
+    Bertille Kemgang<br>
+    Claudia Latta<br>
+    "The Riddler" - <a href="https://www.tu-braunschweig.de/isf/team/lity">Sascha Lity</a><br>
+    "BetaGirl" - <a href="https://www.facebook.com/inga.lowin">Inga Lowin</a><br>
+    "Enemy #1" - <a href="https://www.linkedin.com/in/maltemauritz/">Malte Mauritz</a><br>
+    Sandrine Mbelale<br>
+    "GUI-GUY" - <a href="https://www.linkedin.com/in/jean-paul-tatou-0a74563a/">Jean Paul Tatou</a><br>
+    "Cheffe" - <a href="https://www.linkedin.com/in/martin-wahnschaffe/">Martin Wahnschaffe</a><br>
+    "Loading..." - <a href="https://woizischke.com/">Christian Woizischke</a><br>
+    <br>
+    Leveleditor<br>
+    -------------<br>
+    Alexandr Beresnev<br>
+    "DocuMan" - <a href="https://www.xing.com/profile/Tobias_Lange70/cv">Tobias Lange</a><br>
+    "Undo-Master" - <a href="https://www.linkedin.com/in/mrkslrnz/">Markus Lorenz</a><br>
+    "Läuft" - <a href="https://www.xing.com/profile/Florian_Maetschke/cv">Florian Mätschke</a><br>
+    "The Exporter" - Stefan Tobias<br>
+    Richard Wolfer<br>
+    <br>
+    Betreuung<br>
+    -----------<br>
+    "Die Don" - <a href="https://www.xing.com/profile/Brigitte_Mathiak/cv">Brigitte Matthiak</a><br>
+    "Weihnachtskinde" - <a href="https://www.linkedin.com/in/andreakeil/">Andrea Fricke (geb. Keil)</a><br>
+    <br>
+    HBK<br>
+    -----<br>
+    Lena Ermgassen<br>
+    <a href="https://www.linkedin.com/in/petra-popescu/">Petra Popescu</a><br>
+    <a href="https://www.linkedin.com/in/martin-hallmann-1192384a/">Martin Hallmann</a><br>
+    <a href="https://www.juliachristians.de/julia">Julia Christians (geb. Henkel)</a><br>
+    Yu Ning<br>
+    <br>
+    Story<br>
+    ------<br>
+    <a href="https://www.tu-braunschweig.de/isf/team/lity">Sascha Lity</a><br>
+    <a href="https://www.xing.com/profile/Tobias_Lange70/cv">Tobias Lange</a><br>
+    <br>
+    Vielen Dank an alle Tester und weiteren Helfer!<br>
+  </p>
+</details>
+    
 ## License
 > The J2ME Loader source code is licensed under the [Apache License, Version 2.0.](http://www.apache.org/licenses/LICENSE-2.0)  
 > (See the [LICENSE](https://github.com/nikita36078/J2ME-Loader/blob/master/LICENSE) file for the whole license text.)
